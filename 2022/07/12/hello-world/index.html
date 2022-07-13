@@ -68,7 +68,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"laoliuhome.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"laoliuhome.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"google":"G-QY5CQD51PQ","gtag":null,"leancloud":{"app_id":null,"app_key":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -94,7 +94,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>电脑狂人刘火火</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -255,6 +255,12 @@
     
       
 
+
+<script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
@@ -354,7 +360,27 @@
               
             </div>
 
-            
+            <div id="waline"></div>
+	  <script>
+		Waline.init({
+		  el: '#waline',
+		  serverURL: 'https://waline-laoliuhome.vercel.app',
+		  pageview: true,
+		  emoji: [
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-emoji',
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-body',
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-food',
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-natural',
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-object',
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-symbol',
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-people',
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-sport',
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-travel',
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-weather',
+			'https://unpkg.com/@waline/emojis@1.0.1/tw-flag',
+  		  ],
+		});
+	  </script>	
           </article>
         </div>
       </div>
@@ -444,7 +470,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://www.laoliu.gq" target="_blank" rel="nofollow noopener"><span>电脑狂人刘火火</span></a> 
     </div>
   
   
