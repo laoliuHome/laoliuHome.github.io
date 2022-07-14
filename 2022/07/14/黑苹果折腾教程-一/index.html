@@ -24,7 +24,7 @@
 <meta property="og:description" content="硬件限制在开始安装macOS前，需要先了解您的硬件是否受到支持。因此您需要了解并检查您的下列硬件：&amp;emsp;中央处理器(CPU)&amp;emsp;显卡(GPU)&amp;emsp;主板&amp;emsp;存储(HDD&#x2F;SSD)&amp;emsp;有线网络&amp;emsp;无线网络(可选) CPU寻找您的硬件:  在此电脑中右键 → 属性 在“处理器”中查找您的型号  Intel桌面(及一体机)CPU本文中，如果您使用Intel C">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-14T00:43:25.000Z">
-<meta property="article:modified_time" content="2022-07-14T01:59:08.808Z">
+<meta property="article:modified_time" content="2022-07-14T05:28:43.377Z">
 <meta property="article:author" content="电脑狂人刘火火">
 <meta property="article:tag" content="黑苹果">
 <meta name="twitter:card" content="summary_large_image">
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          2.2k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          13 分钟
+          19 分钟
         
       </span>
     
@@ -469,7 +469,116 @@
 <li>32 位支持<br>对于那些仍然依赖 Mojave 及以下版本的 32 位软件的用户，请注意 Vanilla 补丁不支持 32 位指令<br>一种解决方法是安装<a target="_blank" rel="noopener" href="https://files.amd-osx.com/?dir=Kernels">自定义内核</a>，但是您将失去 iMessage 支持，并且不为这些内核提供支持</li>
 <li>许多应用程序的稳定性问题<br>基于音频的应用程序最容易出现问题，如Logic Pro<br>DaVinci Resolve 也存在一些问题</li>
 </ul>
-<h2 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h2>
+<h2 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h2><p>市场上的 GPU 数量很多，使其支持变得更复杂，因此并不是每种显卡都能正常驱动，尤其是独显，90%的独显都不能正常工作。<br><strong>受支持的CPU如下：</strong></p>
+<ul>
+<li>基于 GCN 的 AMD GPU</li>
+<li>部分 Nvidia 的 GPU<ul>
+<li>Maxwell(9XX) 和 Pascal(10XX) 只在macOS 10.13(High Sierra)支持</li>
+<li>Nvidia’s Turing(20XX, 16XX) 不受支持</li>
+<li>Nvidia’s Ampere(30XX) 不受支持</li>
+<li>Nvidia’s Kepler(6XX, 7XX) 最高支持到macOS12(Monterey)</li>
+</ul>
+</li>
+<li>GT2+ tier 系列 英特尔 iGPUs<ul>
+<li>GT2 是指 iGPU 的层级，macOS 不支持部分硬件上的低端 GT1 iGPU</li>
+</ul>
+</li>
+</ul>
+<h3 id="Intel显卡"><a href="#Intel显卡" class="headerlink" title="Intel显卡"></a>Intel显卡</h3><table>
+<thead>
+<tr>
+<th>显卡名称</th>
+<th>最高支持版本</th>
+<th>最低支持版本</th>
+<th>需要注意</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3rd Gen GMA</td>
+<td>10.7.5</td>
+<td>10.4.1</td>
+<td><a target="_blank" rel="noopener" href="https://dortania.github.io/OpenCore-Post-Install/gpu-patching/legacy-intel/">需要 32 位内核和补丁</a></td>
+</tr>
+<tr>
+<td>4th Gen GMA</td>
+<td>10.7.5</td>
+<td>10.5.0</td>
+<td><a target="_blank" rel="noopener" href="https://dortania.github.io/OpenCore-Post-Install/gpu-patching/legacy-intel/">需要 32 位内核和补丁</a></td>
+</tr>
+<tr>
+<td>Arrandale(HD Graphics)</td>
+<td>10.13.6</td>
+<td>10.6.4</td>
+<td>仅支持 LVDS，不支持 eDP 和外部输出</td>
+</tr>
+<tr>
+<td>Sandy Bridge(HD 3000)</td>
+<td>10.13.6</td>
+<td>10.6.7</td>
+<td>仅支持 LVDS，不支持 eDP 和外部输出</td>
+</tr>
+<tr>
+<td>Ivy Bridge(HD 4000)</td>
+<td>11.6.1</td>
+<td>10.7.3</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Haswell(HD 4XXX, 5XXX)</td>
+<td>-</td>
+<td>10.8.5</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Broadwell(5XXX, 6XXX)</td>
+<td>-</td>
+<td>10.10.0</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Skylake(HD 5XX)</td>
+<td>-</td>
+<td>10.11.0</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Kaby Lake(HD 6XX)</td>
+<td>-</td>
+<td>10.12.4</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Coffee Lake(UHD 6XX)</td>
+<td>-</td>
+<td>10.13.6</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Comet Lake(UHD 6XX)</td>
+<td>-</td>
+<td>10.15.4</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Ice Lake(Gx)</td>
+<td>-</td>
+<td>10.15.4</td>
+<td>需要在boot-args添加-igfxcdc和-igfxdvmt</td>
+</tr>
+<tr>
+<td><font color="Red">Tiger Lake(Xe)</font></td>
+<td>-</td>
+<td>-</td>
+<td><font color="Red">不受支持</font></td>
+</tr>
+<tr>
+<td><font color="Red">Rocket Lake</font></td>
+<td>-</td>
+<td>-</td>
+<td><font color="Red">不受支持</font></td>
+</tr>
+</tbody></table>
+
                 
               </div>
             
