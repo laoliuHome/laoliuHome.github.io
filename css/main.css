@@ -1831,6 +1831,10 @@ input[type=checkbox] {
   background-color: transparent;
   border: 0;
 }
+.list-group-item:active {
+  transform: scale(0.98);
+  transition: 0.2s;
+}
 .list-group-item time {
   flex: 0 0 5rem;
 }
