@@ -311,6 +311,10 @@ sup > a::before,
 .navbar .nav-item .nav-link:focus {
   color: var(--navbar-text-color);
 }
+.navbar .nav-item .nav-link:active {
+  transform: scale(0.98);
+  transition: 0.2s;
+}
 .navbar .nav-item .nav-link i {
   font-size: 0.875rem;
 }
