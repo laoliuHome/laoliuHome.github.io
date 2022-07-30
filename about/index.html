@@ -68,7 +68,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"laoliuhome.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"google":"G-QY5CQD51PQ","gtag":null,"leancloud":{"app_id":null,"app_key":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"laoliuhome.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"google":"G-QY5CQD51PQ","gtag":null,"leancloud":{"app_id":null,"app_key":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -166,6 +166,18 @@
               <a class="nav-link" href="/about/" style="border-radius: 4px;">
                 <i class="iconfont icon-user-fill"></i>
                 关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/chat/" style="border-radius: 4px;">
+                <i class="iconfont icon-chat-fill"></i>
+                论坛
               </a>
             </li>
           
@@ -281,6 +293,81 @@
   <div class="markdown-body">
     
   </div>
+ 
+<style>
+.backimage
+{
+	width: 100%;
+	background: url(https://www.laoliu.gq/img/default.png) bottom center no-repeat #efeff4 ;  
+	background-size: 100% 100%;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    text-align: center;
+    height: auto;
+   margin-top: -80px;
+}
+.zhichi{
+    background-color: rgba(250,250,250,0.72);
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+@keyframes example {
+  0% {border: 2px solid #eee;}
+  100% {border: 2px solid green;}
+}
+
+
+.button{
+	border-radius: 4px;
+	border: 2px solid #eee;
+	background-color: rgb(255,255,255);
+	transition: 0.2s;
+	padding: 6px 22px;
+	outline:none;
+	animation: example 1s;
+	animation-iteration-count: infinite;
+}
+.button:hover{
+	background-color: rgb(235,235,235);
+	border: 2px solid white;
+}
+.button:active{
+	transform: scale(0.94);
+}
+
+.bluebutton{
+	animation: bexample 1s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bexample {
+  0% {border: 2px solid #eee;}
+  100% {border: 2px solid blue;}
+}
+
+</style>
+
+<br />
+<div class="backimage">
+    <div class="zhichi">
+        <font style="font-size: 23px;">支持我</font><br />
+	<button class="button" style="margin-top: 5px;background-color: rgb(183, 155, 240);width: 100%;border: none!important;padding: 10px 25px;color: white;" onclick='window.open("https://afdian.net/@laoliuHome")' ><b>爱发电</b></button><br />
+	<button class="button" style="margin-top: 5px;background-color: rgb(255, 221, 0);width: 100%;border: none!important;padding: 10px 25px;color: black;" onclick='window.open("https://www.buymeacoffee.com/laoliu")' ><b>buy me a coffee</b></button><br />
+
+	<br />
+    	<font style="font-size: 16px;"><b>写文章不容易，您只需要将以下页面设为主页，即可支持我</b></font><br />
+        <button class="button" style="margin-top: 5px;" onclick='window.open("https://www.2345.com/?k2816704723")'><b>https://www.2345.com/?k2816704723</b></button><br />
+        <button class="button bluebutton" style="margin-top: 5px;" onclick='window.open("https://liuyanzhi303-my.sharepoint.com/:f:/g/personal/liuhuohuo_liuyanzhi303_onmicrosoft_com/EtCi5Tb2ySdCg88lCgPMlnwBKM9FV1w4BNupWj7yQ9udUw?e=cxIyVS'><b>安装2345安全浏览器，获得更佳体验</b></button><br />
+        <a style="margin-top: 15px;" href="" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('https://www.2345.com/?k2816704723');">点击设为主页(部分浏览器需手动设置)</a><br />
+        <a style="margin-top: 15px;" target="_blank" rel="noopener" href="https://dwz.cn/GrpcSNej">注册王牌技术员联盟赚钱</a>
+    </div>
+</div>
+
+
 
   
 </article>
@@ -355,7 +442,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://www.laoliu.gq" target="_blank" rel="nofollow noopener"><span>电脑狂人刘火火</span></a> 
+       <a href="https://www.laoliu.gq" target="_blank" rel="nofollow noopener"><span>电脑狂人刘火火</span></a> <div style="font-size: 0.85rem"> <a href="https://blog.csdn.net/ssssswsrjhtdj" target="_blank" rel="nofollow noopener"><span>CSDN</span></a> <a href="https://www.zhihu.com/people/liu-huo-huo-83-12" target="_blank" rel="nofollow noopener"><span>知乎</span></a> <a href="https://space.bilibili.com/1238947930" target="_blank" rel="nofollow noopener"><span>哔哩哔哩</span></a> </div> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   

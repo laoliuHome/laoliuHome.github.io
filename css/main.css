@@ -716,6 +716,11 @@ sup > a::before,
 .tocbot-list {
   position: relative;
 }
+.tocbot-list border,
+.tocbot-list:active {
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 3px;
+}
 .tocbot-list ol {
   list-style: none;
   padding-left: 1rem;
@@ -1361,6 +1366,16 @@ figure.highlight td.code > pre {
 }
 .markdown-body a {
   color: var(--post-link-color);
+  border-radius: 1px;
+  transition: 0.2s;
+}
+.markdown-body a:hover {
+  border-radius: 3px;
+  background-color: rgba(200,200,200,0.2);
+  padding: 4px;
+}
+.markdown-body a:active {
+  background-color: rgba(200,200,200,0.3);
 }
 .markdown-body strong {
   font-weight: bold;
@@ -1369,6 +1384,10 @@ figure.highlight td.code > pre {
   tab-size: 4;
   background-color: var(--inlinecode-bg-color);
   transition: background-color 0.2s ease-in-out;
+}
+.markdown-body table {
+  border-radius: 5px;
+  border: 1px solid #eaecef;
 }
 .markdown-body table tr {
   background-color: var(--board-bg-color);
